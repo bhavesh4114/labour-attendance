@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFC">
+
+    <!-- ================= SCROLLABLE CONTENT ================= -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNav"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Workers"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#0F172A"/>
+
+            <!-- Search Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:tint="#94A3B8"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search by name or role..."
+                    android:textColor="#94A3B8"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <!-- Active Workers Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ACTIVE WORKERS (24)"
+                    android:textColor="#64748B"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SORT: RECENT"
+                    android:textColor="#64748B"/>
+            </LinearLayout>
+
+            <!-- ================= WORKER CARD ================= -->
+
+            <!-- Worker Item -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
+                android:elevation="6dp"
+                android:padding="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Avatar -->
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:gravity="center"
+                    android:text="DL"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#2563EB"
+                    android:background="#DBEAFE"/>
+
+                <!-- Info -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="David Lee"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#0F172A"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" ACTIVE "
+                            android:textSize="12sp"
+                            android:textColor="#16A34A"
+                            android:background="#DCFCE7"
+                            android:layout_marginStart="10dp"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Plumber"
+                        android:textColor="#64748B"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(555) 0771"
+                        android:textColor="#94A3B8"
+                        android:layout_marginTop="2dp"/>
+                </LinearLayout>
+
+                <!-- View Button -->
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:text="View"
+                    android:textColor="#2563EB"
+                    android:background="#E0E7FF"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Floating Add Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_above="@id/bottomNav"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-30dp"
+        android:src="@android:drawable/ic_input_add"
+        app:backgroundTint="#2563EB"
+        android:translationZ="20dp"
+        app:tint="@android:color/white"
+        android:elevation="20dp"/>
+
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:elevation="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Dashboard"
+            android:textColor="#94A3B8"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Workers"
+            android:textColor="#2563EB"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Schedule"
+            android:textColor="#94A3B8"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Settings"
+
+            android:textColor="#94A3B8"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

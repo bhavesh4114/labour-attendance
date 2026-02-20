@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F3F6FB"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ================= SCROLL AREA ================= -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomLayout"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:background="@drawable/bg_circle_light"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_calendar"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="12dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Daily Attendance"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#111827"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="MAJDURI HAJRI"
+                        android:textSize="12sp"
+                        android:textColor="#6B7280"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_circle_light"
+                    android:padding="10dp"
+                    android:src="@drawable/bg_search"/>
+            </LinearLayout>
+
+            <!-- DATE HORIZONTAL SCROLL -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- NORMAL DATE -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/ic_calendar"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="12dp">
+
+                        <TextView
+                            android:text="MON"
+                            android:textColor="#6B7280"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="21"
+                            android:textColor="#111827"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- SELECTED DATE -->
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="110dp"
+                        android:background="@drawable/bg_selected_date"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="12dp">
+
+                        <TextView
+                            android:text="WED"
+                            android:textColor="@android:color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="23"
+                            android:textColor="@android:color/white"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- WORKER CARD -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_bg"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- TOP ROW -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_worker"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:text="Rajesh Kumar"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:text="Head Mason"
+                            android:textSize="13sp"
+                            android:textColor="#6B7280"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <!-- OT SECTION -->
+                    <LinearLayout
+                        android:layout_width="110dp"
+                        android:layout_height="40dp"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:background="@drawable/bg_ot"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp">
+
+                        <!-- MINUS -->
+                        <TextView
+                            android:id="@+id/txtMinus"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="–"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#6B7280"/>
+
+                        <!-- VALUE -->
+                        <TextView
+                            android:id="@+id/txtOtValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="#111827"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"/>
+
+                        <!-- PLUS -->
+                        <TextView
+                            android:id="@+id/txtPlus"
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="+"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:textColor="#3B82F6"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- STATUS BUTTONS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:text="PRESENT"
+                        android:textColor="#059669"
+                        android:background="@drawable/bg_present"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="ABSENT"
+                        android:textColor="#DC2626"
+                        android:background="@drawable/bg_absent"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="HALFDAY"
+                        android:textColor="#D97706"
+                        android:background="@drawable/bg_halfday"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ================= BOTTOM ================= -->
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <!-- BLUE SUMMARY BAR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#3B82F6"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:text="18 Present"
+                android:textColor="@android:color/white"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="4.5 Total OT Hrs"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- SAVE BUTTON -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:text="Save Attendance"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
