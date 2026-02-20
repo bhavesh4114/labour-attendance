@@ -78,14 +78,14 @@
                     <LinearLayout
                         android:layout_width="80dp"
                         android:layout_height="110dp"
-                        android:background="@drawable/ic_calendar"
+                        android:background="@drawable/bg_button"
                         android:gravity="center"
                         android:orientation="vertical"
                         android:layout_marginEnd="12dp">
 
                         <TextView
                             android:text="MON"
-                            android:textColor="#6B7280"
+                            android:textColor="@android:color/white"
                             android:textSize="13sp"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
@@ -93,7 +93,7 @@
 
                         <TextView
                             android:text="21"
-                            android:textColor="#111827"
+                            android:textColor="@android:color/white"
                             android:textSize="22sp"
                             android:textStyle="bold"
                             android:layout_width="wrap_content"
